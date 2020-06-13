@@ -154,7 +154,7 @@ Navbar
   display: flex;
   align-items: center;
   border-bottom: 2px solid var(--primaryColor);
-  box-shadow: var(--lightShadow);
+  /*box-shadow: var(--lightShadow);*/
 }
 .nav-center {
   display: flex;
@@ -231,14 +231,16 @@ Cocktails List
   margin-top: 1rem;
 }
 .cocktails-center {
+  text-align: center;
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--fullWidth);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370.8px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   column-gap: 1.8rem;
   row-gap: 1.8rem;
   /* align-items: start; */
+  
 }
 /* 
 ====== 
