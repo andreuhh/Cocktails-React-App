@@ -154,7 +154,7 @@ Navbar
   display: flex;
   align-items: center;
   border-bottom: 2px solid var(--primaryColor);
-  box-shadow: var(--lightShadow);
+ /* box-shadow: var(--lightShadow);*/
 }
 .nav-center {
   display: flex;
@@ -256,7 +256,7 @@ Cocktail
   border-radius: var(--mainBorderRadius);
 }
 .cocktail:hover {
-  box-shadow: var(--darkShadow);
+  /*box-shadow: var(--darkShadow);*/
 }
 .cocktail img {
   border-top-left-radius: var(--mainBorderRadius);
