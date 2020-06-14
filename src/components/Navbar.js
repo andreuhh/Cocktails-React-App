@@ -5,7 +5,7 @@ import logo from '../logo.svg';
 export default function Navbar() {
   return <nav className="navbar">
     <div className='nav-center'>
-      <img className='logo' src={logo} alt='logo' />
+      <h2 className='logo'>I-cocktail</h2>
       <ul className='nav-links'>
         <li>
           <Link to='/'>Home</Link>

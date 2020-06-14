@@ -74,20 +74,20 @@ export default function SingleCocktail() {
     } = cocktail;
     return (
       <section className='section cocktail-section'>
-        <Link to='/' className='btn btn-primary'>
-          go back
-        </Link>
+
         <h2 className='section-title'>{name}</h2>
         <div className='drink'>
           <img src={image} alt='name' />
           <div className='drink-info'>
-            <p>name : {name}</p>
-            <p>category : {category}</p>
-            <p>info : {info}</p>
-            <p>glass : {glass}</p>
-            <p>instructions : {instructions}</p>
+            <p>Name : {name}</p>
+            <p>Category : {category}</p>
+            <p>Info : {info}</p>
+            <p>Glass : {glass}</p>
+            <h3>Instructions :</h3>
+            <p> {instructions}</p>
+            <h3>Ingredients :</h3>
             <p>
-              ingredients : {
+              {
                 ingredients.map((item, index) => {
                   return item ? <span key={index}>{item}</span>
                     : null;
@@ -96,6 +96,9 @@ export default function SingleCocktail() {
             </p>
           </div>
         </div>
+        <Link to='/' className='btn btn-primary btn-primary-center'>
+          go back
+        </Link>
       </section>
     );
   }

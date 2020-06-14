@@ -3,7 +3,8 @@
 Fonts
 ======
 */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400|Solway:400,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
 /* 
 ====== 
 Variables 
@@ -11,9 +12,11 @@ Variables
 */
 :root {
   --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
+  /*--primaryColor: #476a2e;*/
+  --primaryColor: #F76176;
   --primaryDarkColor: #c02c03;
-  --primaryFont: "Open Sans", sans-serif;
+  --primaryFont: 'Raleway', sans-serif;
+  --secondaryFont: 'Candal', sans-serif;
   --slantedFont: "Solway", serif;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -24,8 +27,8 @@ Variables
   --darkGrey: #afafaf;
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --mainSpacing: 0.1rem;
+  --lightShadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
   --smallWidth: 85vw;
@@ -57,9 +60,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--slantedFont);
+  font-family: var(--secondaryFont);
   margin-bottom: 1.25rem;
-  letter-spacing: var(--mainSpacing);
+  /*letter-spacing: var(--mainSpacing);*/
 }
 p {
   margin-bottom: 1.25rem;
@@ -94,17 +97,18 @@ Buttons
 .btn,
 .btn-white,
 .btn-primary {
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
-  color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
-  padding: 0.45rem 0.8rem;
+  /*color: var(--primaryColor);*/
+  border: 2px solid #121212;
+  padding: 5px 30px;
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
   background: transparent;
-  border-radius: var(--mainBorderRadius);
+  border-radius: 50px;
   display: inline-block;
 }
 .btn:hover {
@@ -115,33 +119,35 @@ Buttons
   background: transparent;
   color: var(--mainWhite);
   border-color: var(--mainWhite);
+  
 }
 .btn-white:hover {
   background: var(--mainWhite);
   color: var(--primaryColor);
 }
 .btn-primary {
-  background: var(--primaryColor);
-  color: var(--mainWhite);
-  border-color: var(--primaryColor);
+  background: #fff;
+  color: var(--primaryColor);
+  border-color:#121212;
 }
 .btn-primary:hover {
   background: transparent;
   color: var(--primaryColor);
+  
 }
 .btn-block {
   width: 100%;
   display: block;
   margin: 0 auto;
-  box-shadow: var(--lightShadow);
   text-align: center;
 }
 .btn-details {
-  padding: 0.25rem 0.4rem;
+  padding: .4rem 0.8rem;
 }
 .btn-details:hover {
-  background: var(--primaryLightColor);
-  border-color: var(--primaryLightColor);
+ /* background: var(--primaryLightColor);
+  border-color: var(--primaryLightColor);*/
+  box-shadow: var(--lightShadow);
 }
 /* 
 ====== 
@@ -154,7 +160,6 @@ Navbar
   display: flex;
   align-items: center;
   border-bottom: 2px solid var(--primaryColor);
-  /*box-shadow: var(--lightShadow);*/
 }
 .nav-center {
   display: flex;
@@ -184,6 +189,7 @@ Navbar
 }
 .logo {
   width: 12rem;
+  color: var(--primaryColor);
 }
 /* 
 ====== 
@@ -223,8 +229,8 @@ Cocktails List
   padding: 4rem 0;
 }
 .section-title {
-  font-size: 2rem;
-  text-transform: capitalize;
+  font-size: 2.8rem;
+  text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   text-align: center;
   margin-bottom: 3.5rem;
@@ -251,21 +257,23 @@ Cocktail
 .cocktail {
   background: var(--mainWhite);
   margin-bottom: 2rem;
-  box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   display: grid;
   grid-template-rows: auto 1fr;
-  border-radius: var(--mainBorderRadius);
+  border-radius: 50px;
 }
 .cocktail:hover {
-  box-shadow: var(--darkShadow);
+  /*box-shadow: var(--darkShadow);*/
 }
 .cocktail img {
-  border-top-left-radius: var(--mainBorderRadius);
-  border-top-right-radius: var(--mainBorderRadius);
+  border-radius: 50px 50px 0 0;
 }
 .cocktail-footer {
   padding: 1.5rem;
+  border: 1px solid #121212;
+  border-top: none;
+  border-radius: 0 0 50px 50px;
+  text-align: center;
 }
 .cocktail-footer h3,
 .cocktail-footer h4,
@@ -279,6 +287,11 @@ Cocktail
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
 }
+
+.cocktail-footer h4,
+.cocktail-footer p {
+  text-align: left;
+}
 /* 
 ====== 
 Form
@@ -289,14 +302,21 @@ Form
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--maxWidth);
+  text-align: center;
 }
 
 .search-form {
-  background: var(--mainWhite);
   padding: 1.25rem 1rem;
   text-transform: capitalize;
-  border-radius: var(--mainBorderRadius);
-  box-shadow: var(--lightShadow);
+  border-radius: 50px;
+  /*box-shadow: var(--lightShadow);
+  background: var(--mainWhite);*/
+  
+}
+
+.search-form:focus {
+  border: 1px solid var(--primaryColor);
+  border-radius: 50px;
 }
 
 .form-control label {
@@ -304,14 +324,24 @@ Form
   margin-bottom: 0.5rem;
   color: var(--primaryColor);
 }
+
 .form-control input {
-  width: 100%;
+  width: 70%;
   border: none;
-  border: 2px solid var(--darkGrey);
-  border-radius: var(--mainBorderRadius);
+  border: 1px solid var(--darkGrey);
+  border-radius: 50px;
   padding: 0.5rem;
   font-size: 1.2rem;
 }
+
+.form-control input:focus,
+.form-control input:active {
+  border: 2px solid var(--primaryColor);
+  border-radius: 50px;
+  width: 75%;
+  outline: none;
+}
+
 /* 
 ====== 
 Cocktail
@@ -328,10 +358,9 @@ Cocktail
   text-align: left;
 }
 .drink img {
-  border-radius: var(--mainBorderRadius);
+  border-radius: 20px;
 }
 .drink p {
-  font-weight: bold;
   text-transform: capitalize;
 }
 .drink span {
@@ -340,6 +369,7 @@ Cocktail
 .drink-info {
   padding-top: 2rem;
 }
+
 @media screen and (min-width: 900px) {
   .drink {
     display: grid;
@@ -352,3 +382,4 @@ Cocktail
   }
 }
 
+/*<img className='logo' src={logo} alt='logo' />*/
