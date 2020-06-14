@@ -188,7 +188,7 @@ Navbar
   color: var(--primaryColor);
 }
 .logo {
-  width: 12rem;
+ 
   color: var(--primaryColor);
 }
 /* 
@@ -246,8 +246,8 @@ Cocktails List
   column-gap: 1.8rem;
   row-gap: 1.8rem;
   /* align-items: start; */
-  
 }
+
 /* 
 ====== 
 Cocktail 
