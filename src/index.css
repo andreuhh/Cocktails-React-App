@@ -262,9 +262,9 @@ Cocktail
   grid-template-rows: auto 1fr;
   border-radius: 50px;
 }
-.cocktail:hover {
-  /*box-shadow: var(--darkShadow);*/
-}
+/*.cocktail:hover {
+  box-shadow: var(--darkShadow);
+}*/
 .cocktail img {
   border-radius: 50px 50px 0 0;
 }
